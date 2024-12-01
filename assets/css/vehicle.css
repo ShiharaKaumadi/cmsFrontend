@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter&display=swap');
+/*Element Selector-body*/
+body{
+    /*There is no need to add margin or padding default by browser I want the full space */
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Bitter', serif;
+}
+
+.material-icons-out-outLined{
+    vertical-align: middle;
+    line-height: 1px;
+    font-size: 35px;
+}
+/*Grid*/
+.grid-container{
+    display:grid; /*grid content*/
+    grid-template-columns: 260px 1fr 1fr 1fr;/*Specify the columns the grid have,First Column needs 260px and others have 1fr*/
+    grid-template-rows: 0.2fr 3fr;/*how many rows we need..Header row takes 0.2fr and rest rows take 3fr --hieght*/
+    grid-template-areas:"sidebar header header header" "sidebar main main main";/*Layout and how it should visualize*/
+    height:100vh;/*make the heigh to visible are of the web page 100% of view port  hieght of page*/
+
+}
+/*Header*/
+.header{
+    grid-area: header;
+    height:50px;
+    /* background-color: #7dc99e;*/
+    display:flex; /*Allows items to place left and some on right*/
+    align-items:center;
+    justify-content: space-between;
+    padding:0 10px 0 10px;
+    box-shadow: 0 6px 7px -3px rgba(71, 129, 100, 0.5);
+}
+/*We want to view menu-icon in small screen sizes so set display to none*/
+.menu-icon{
+    display:none ;
+}
+/*Side menu bar*/
+#sidebar{
+    grid-area: sidebar;
+    height:100%;
+    background-color: #FF4545;
+    overflow-y: auto;/*Push this sidebar to left, when the screen size decreases*/
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.sidebar-title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px 30px 30px;
+    margin-bottom: 20px;
+}
+
+.sidebar-brand{
+    margin-top:15px ;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.sidebar-title>span{
+    display: none;
+}
+
+.sidebar-list{
+    padding: 0;
+    margin-top:20px ;
+    list-style-type: none;
+    color: #FEF3E2;
+
+}
+.sidebar-list>a{
+    text-decoration: none;
+    color:#FEF3E2;
+}
+
+.sidebar-list-item{
+    padding: 20px 20px 20px 20px;
+    font-size: 18px;
+}
+
+.sidebar-list-item:hover{
+    background-color: rgba(255,255,255,0.2);
+    cursor: pointer;
+}
+.sidebar-list-item>a{
+    text-decoration: none;
+    color: black;
+}
+.sidebar-responsive{
+    display: inline !important;
+    position: absolute;
+    z-index: 12 !important;
+}
+.first-section{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+.first-section>div:first-child{
+    background-color: #e685b5;
+    align-items: flex-start;
+
+}
+.first-section>div:nth-child(2){
+    background-color: #fd7e14;
+
+}

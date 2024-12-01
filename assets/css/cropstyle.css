@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    display: flex;
+}
+.sidebar{
+    position: sticky;
+    top:0;
+    bottom:0;
+    left:0;
+    width:75px;
+    height:100vh;
+    padding:0.17rem;
+    color:white;
+    overflow: hidden;
+    transition:all 0.5s linear;
+    background:#E78F81;
+}
+.logo{
+    height: 80px;
+    padding:12px;
+}
+.menu{
+    height:88%;
+    position:relative;
+    list-style: none;
+    padding: 0;
+}
+.menu li{
+    padding: 1.5rem;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition:all 0.5s ease-in-out;
+}
+.menu li:hover, .active{
+    background: #e0e0e058;
+}
+.menu a{
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap:1rem;
+}
+.menu a span{
+    overflow: hidden;
+}
+.menu a i{
+    font-size: 1.2rem;
+}
+.logout{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
+.sidebar:hover{
+    width:220px;
+    transition:0.5s;
+}
+.main-content{
+    position:relative;
+    background: #e5dede;
+    width:100%;
+    padding:1.2rem;
+}
+.header-wrapper img{
+    width:50px;
+    height:50px;
+    cursor:pointer;
+    border-radius: 50%;
+}
+.header-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #eed6c7;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem ;
+}
+.header-title{
+    color:firebrick;
+}
+.user-info{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.search-box{
+    background: #eed6c7;
+    border-radius: 15px;
+    color: gray;
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding:6px 12px;
+}
+.search-box input{
+    background: #f1d9dd;
+    padding: 10px;
+}
+.search-box i{
+    font-size: 1.5rem;
+    cursor:pointer;
+    transition: all 0.5s ease-out;
+}
+.search-box i:hover{
+    transform: scale(1.2);
+}
+.card-container{
+    background: #e7d7da;
+    padding:15px;
+    border-radius:15px;
+}
+.card-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap:1rem;
+}
+.main-title{
+    color:gray;
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+.crop-card{
+    background: #efe4b3;
+    border-radius: 10px;
+    padding:1.2rem;
+    width:290px;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+.crop-card:hover{
+    transform: translateY(-5px);
+}
+.card-header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.amount{
+    display: flex;
+    flex-direction: column;
+}
+.amount span{
+    font-size:20px ;
+    font-weight: 300;
+}
+.title{
+    font-size: 12px;
+    font-weight: 200;
+}
+.amount-value{
+    font-size: 24px;
+    font-weight: 600;
+}
+.icon{
+    color: white;
+    padding: 1rem;
+    height:60px;
+    width:60px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: tomato;
+}
+
+.card-detail{
+    font-size: 20px;
+    letter-spacing: 2px;
+    color:#777
+}
+.light-red{
+    background: #fac1a1;
+}
+.light-green{
+    background: #b7dcc7;
+}
+.light-purple{
+    background: #d1cef8;
+}
+.light-yellow{
+    background: #f8b4be;
+}
+
+.tabular-wrapper{
+    background: #e5e3e3;
+    margin-top: 1rem;
+    border-radius:10px ;
+    padding:2rem;
+}
+
+.table-container{
+    width:100%;
+    border-collapse: collapse;
+}
+thead{
+    background: #466c46;
+    color: white;
+}
+th{
+    padding:15px;
+    text-align: left;
+}
+tbody{
+    background: #def5de;
+}
+td{
+    padding:15px;
+    font-size: 18px;
+    color: #656464;
+}
+tr:nth-child(even){
+    background: white;
+}
+.table-container button{
+    background: green;
+    cursor: pointer;
+    color: #656464;
+}
